@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/search"
+            android:hint="Search"
+            android:maxLines="1"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/standard_margin"
+            android:layout_marginEnd="@dimen/standard_margin"
+            android:stretchColumns="1">
+
+            <TableRow>
+
+                <TextView
+                    android:gravity="start"
+                    android:padding="3dip"
+                    android:textStyle="bold"
+                    android:text="ID" />
+
+                <TextView
+                    android:gravity="center"
+                    android:padding="3dip"
+                    android:textStyle="bold"
+                    android:text="Number" />
+
+                <TextView
+                    android:gravity="right"
+                    android:padding="3dip"
+                    android:textStyle="bold"
+                    android:text="State" />
+            </TableRow>
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_items"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/standard_margin" />
+
+    </LinearLayout>
+</layout>
