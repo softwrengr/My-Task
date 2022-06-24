@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 object ExtensionFunctions {
 
-    fun setupRecylerView(recyclerView: RecyclerView, context: Context): RecyclerView {
+    fun setupRecyclerView(recyclerView: RecyclerView, context: Context): RecyclerView {
         recyclerView.setHasFixedSize(true)
         val gridLayoutManager = LinearLayoutManager(context)
         recyclerView.layoutManager = gridLayoutManager

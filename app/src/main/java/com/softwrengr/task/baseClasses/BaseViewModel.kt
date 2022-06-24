@@ -5,5 +5,4 @@ import javax.inject.Inject
 
 open class BaseViewModel @Inject constructor()
     : ViewModel() {
-
 }

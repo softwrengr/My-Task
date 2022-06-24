@@ -10,7 +10,7 @@ import com.softwrengr.task.viewmodels.ItemListViewModel
 import com.softwrengr.task.adapters.MyAdapter
 import com.softwrengr.task.baseClasses.BaseActivity
 import com.softwrengr.task.databinding.ActivityTableBinding
-import com.softwrengr.task.utilities.ExtensionFunctions.setupRecylerView
+import com.softwrengr.task.utilities.ExtensionFunctions.setupRecyclerView
 import com.softwrengr.task.viewmodels.TableViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -32,7 +32,7 @@ class TableActivity : BaseActivity<ActivityTableBinding>() {
         itemViewModel = ItemListViewModel()
         super.onCreate(savedInstanceState)
 
-        val recyclerView = setupRecylerView(binding.rvItems, this)
+        val recyclerView = setupRecyclerView(binding.rvItems, this)
         adapter = MyAdapter(itemViewModel)
         adapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
         recyclerView.adapter = adapter
